@@ -1,4 +1,7 @@
-# 矩阵分解器
+# cppMathKernel
+该项目为本人手搓过的各类数学内核函数的整合，包括矩阵分解、BLAS等。目前已整合矩阵分解部分函数。项目中的函数大部分都是平台通用的c/cpp未优化函数，主要为个人参考使用和积累学习，也供大家参考。
+
+## 1 矩阵分解器
 
 **警告：本项目为课堂作业/练习项目，不能保证正确性！**
 
@@ -12,11 +15,11 @@
 - 对m*n矩阵的秩的计算
 - 对n*n矩阵的行列式的计算
 
-## 项目结构
+### 项目结构
 
 该项目自底向上可划分为四个层次：
 
-### blas.cpp/blas.h（底层函数层）
+#### blas.cpp/blas.h（底层函数层）
 
 即基础线性代数运算层。参考BLAS（Basic Linear Algebra Subprograms）的接口风格和内存设计，对基础的矩阵、向量运算予以实现，包括：
 
@@ -51,7 +54,7 @@
 - 矩阵的迹
   - double ddiagdot(const int& n, const double* a, const int& lda)
 
-### linpack.cpp/linpack.h（高层函数层）
+#### linpack.cpp/linpack.h（高层函数层）
 
 借用线性系统软件包(Linear system package) 的缩写，主要是上层函数的实现，包括：
 
@@ -82,19 +85,19 @@
   - void QRSolve(const int& n, const double* q, const int& ldq, const double* r, const int& ldr,
         const double* b, const int& incb, double* x, const int& incx)
 
-### interface.cpp/interface.h*（接口层）
+#### interface.cpp/interface.h*（接口层）
 
 对上层函数的封装，为应用层调用提供参数友好的接口。
 
-### main.cpp（应用层）
+#### main.cpp（应用层）
 
 面向用户的函数调用和测试，拥有完善的提示文字，交互友好，支持文件输入和控制台输入两种方式。
 
-## 项目参数与内存设计解释
+### 项目参数与内存设计解释
 
 参考高性能计算的开发习惯，本项目采用列主序的方式存储，即元素按列连续存储，在C/C++中以一维动态数组实现。为方便理解，以下对向量和矩阵的参数作简要解释，各函数的具体参数解释可参考源代码注释。
 
-### 矩阵与主维度（Leading dimension）
+#### 矩阵与主维度（Leading dimension）
 
 在本项目中，一个矩阵A包括以下参数：
 
@@ -106,7 +109,7 @@
 
 对矩阵A的第i行，第j列元素，其坐标为i+j*lda。在该项目中，绝大部分情况下均取ld?=m，部分涉及子矩阵计算情况时，存在ld?>m的情况（如Givens分解）。
 
-### 向量
+#### 向量
 
 向量x存储的逻辑相对简单，包括以下参数：
 
