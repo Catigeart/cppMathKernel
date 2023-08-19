@@ -3,7 +3,7 @@
 //
 #include <cstdio>
 #include <cstdlib>
-#include "utils.h"
+#include "factor/utils.h"
 
 void* safe_malloc(size_t size) {
     void *p = malloc(size);

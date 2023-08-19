@@ -2,9 +2,9 @@
 // Created by Catigeart on 2022/11/23.
 //
 #include <cstdio>
-#include "linpack.h"
-#include "blas.h"
-#include "utils.h"
+#include "factor/linpack.h"
+#include "factor/blas.h"
+#include "factor/utils.h"
 #include <cmath>
 /*
 void dgmv_test() {

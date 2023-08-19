@@ -1,10 +1,10 @@
 //
 // Created by Catigeart on 2022/11/27.
 //
-#include "interface.h"
-#include "linpack.h"
-#include "blas.h"
-#include "utils.h"
+#include "factor/interface.h"
+#include "factor/linpack.h"
+#include "factor/blas.h"
+#include "factor/utils.h"
 
 int Rank(const int &m, const int &n, const double *a, const int &lda) {
     const int &ldb = m;

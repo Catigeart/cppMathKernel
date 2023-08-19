@@ -1,6 +1,6 @@
 #include <cstdio>
-#include "interface.h"
-#include "utils.h"
+#include "factor/interface.h"
+#include "factor/utils.h"
 
 // 要求完成课堂上讲的关于矩阵分解的LU、QR（Gram-Schmidt）、Orthogonal Reduction (Householder reduction 和Givens reduction)和 URV程序实现，要求如下：
 //

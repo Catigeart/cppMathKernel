@@ -4,8 +4,8 @@
 #include <cstring>
 #include <cmath>
 #include <cfloat>
-#include "blas.h"
-#include "utils.h"
+#include "factor/blas.h"
+#include "factor/utils.h"
 
 int damax(const int& n, const double* x, const int& incx) {
     auto maxVal = -DBL_MAX;

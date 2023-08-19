@@ -7,9 +7,9 @@
 #include <cstring>
 #include <cassert>
 #include <cmath>
-#include "linpack.h"
-#include "blas.h"
-#include "utils.h"
+#include "factor/linpack.h"
+#include "factor/blas.h"
+#include "factor/utils.h"
 
 void lup(const int& n, const double* a, const int& lda,
                double* l, const int& ldl, double* u, const int& ldu, double* p, const int& ldp, int& swap_cnt) {
