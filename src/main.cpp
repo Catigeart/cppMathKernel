@@ -2,6 +2,11 @@
 #include "factor/interface.h"
 #include "factor/utils.h"
 
+#include "matlab/matrix.h"
+#include "matlab/blas.h"
+#include "matlab/matlab.h"
+#include "matlab/util.h"
+
 // 要求完成课堂上讲的关于矩阵分解的LU、QR（Gram-Schmidt）、Orthogonal Reduction (Householder reduction 和Givens reduction)和 URV程序实现，要求如下：
 //
 //        1、一个综合程序，根据选择参数的不同，实现不同的矩阵分解；在此基础上，实现Ax=b方程组的求解，以及计算A的行列式；
